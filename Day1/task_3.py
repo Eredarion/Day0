@@ -7,5 +7,5 @@ html_file.close()
 
 # -- Find text -- 
 text = "My super text"
-list_1 = re.findall(text,html)
+list_1 = re.findall(text, html)
 print(list1)
