@@ -7,7 +7,7 @@ html_file.close()
 
 # -- Find text --
 p = html.find("p").getText()
-title = html.find('title').getText()
+title = html.find("title").getText()
 
 print(title)
 print(p)
