@@ -7,15 +7,13 @@ def find_char_count(text):
                   char_summ += 1
       print(char_summ)
 
-# -- Write file -- 
-file = open("1_file_1.txt", "w")
-file.write(long_string)
-file.close()
+""" Write file """
+with open("1_file_1.txt", "w") as file:
+      file.write(long_string)
 
-# -- Read file --
-file = open("1_file_1.txt", "r")
-file_text = file.read()
-file.close()
+""" Read file """
+with open("1_file_1.txt", "r") as file:
+      file_text = file.read()
 
-# -- 'и' count
+""" 'и' count """
 find_char_count(file_text)

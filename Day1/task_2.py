@@ -1,28 +1,22 @@
 import os
 
-# -- Just text --
+""" Just text """
 text_one = "ее скотчем к пульту от телевизора и звонить на него, когда тот теряется!"
 text_two = "Только мой папа догадался купить новую мобилу, примотать"
 
-# -- Write file one --
-file_one = open("2_file_1.txt", "w")
-file_one.write(text_one)
-file_one.close()
+""" Write file one """
+with open("2_file_1.txt", "w") as file_one:
+      file_one.write(text_one)
 
-# -- Write file two --
-file_two = open("2_file_2.txt", "w")
-file_two.write(text_two)
-file_two.close()
+""" Write file two """
+with open("2_file_2.txt", "w") as file_two:
+      file_two.write(text_two)
 
-# -- Get string from file one --
-file_one = open("2_file_1.txt", "r")
-s = file_one.read()
-file_one.close()
+""" Get string from file one and append the line to file two"""
+with open("2_file_1.txt", "r") as file_one:
+      s = file_one.read()
+      with open("2_file_2.txt", "a") as file_two:
+            file_two.write(s)
 
-# -- Append the line to file two --
-file_two = open("2_file_2.txt", "a")
-file_two.write(s)
-file_two.close()
-
-# -- Delete file one -- 
+""" Delete file one """ 
 os.remove("2_file_1.txt")
