@@ -12,7 +12,7 @@ with open("2_file_1.txt", "w") as file_one:
 with open("2_file_2.txt", "w") as file_two:
       file_two.write(text_two)
 
-""" Get string from file one and append the line to file two"""
+""" Get string from file one and append the line to file two """
 with open("2_file_1.txt", "r") as file_one:
       s = file_one.read()
       with open("2_file_2.txt", "a") as file_two:
